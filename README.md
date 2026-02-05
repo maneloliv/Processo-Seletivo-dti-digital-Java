@@ -1,131 +1,172 @@
-# Processo-Seletivo-dti-digital-Java
-Sistema de Gestão Escolar - Professor Carlos
-Instruções para Executar o Sistema
-Pré-requisitos
-Java JDK 8 ou superior instalado
+# 🎓 Sistema de Gestão Escolar — Processo Seletivo DTI Digital (Java)
 
-Terminal/Command Prompt
+![Java](https://img.shields.io/badge/Java-8%2B-blue?style=for-the-badge&logo=java)
+![Status](https://img.shields.io/badge/Status-Finalizado-brightgreen?style=for-the-badge)
+![Plataforma](https://img.shields.io/badge/Plataforma-Multiplataforma-lightgrey?style=for-the-badge)
+![Interface](https://img.shields.io/badge/Interface-Terminal-orange?style=for-the-badge)
+![Complexidade](https://img.shields.io/badge/Complexidade-Baixa-yellow?style=for-the-badge)
 
-Passos para Executar:
-Baixe os arquivos:
+Sistema desenvolvido em **Java puro** para gerenciamento de alunos, notas e frequência, com interface via terminal.
 
-Aluno.java
+Projeto criado para o **processo seletivo da dti digital**.
 
-SistemaProfessor.java
+---
 
-Compile o sistema:
+## 📋 Pré-requisitos
 
-bash
-javac SistemaProfessor.java Aluno.java
-Execute o programa:
+- Java JDK 8 ou superior  
+- Terminal / Prompt de Comando  
 
-bash
-java SistemaProfessor
-Alternativa para Windows:
-Execute o arquivo run.bat (se disponível) clicando duas vezes nele.
+---
 
-Lista de Premissas Assumidas
-Cinco disciplinas fixas para todos os alunos
+## ▶️ Como Executar
 
-Notas de 0 a 10 para cada disciplina
+### 📥 Arquivos necessários
+- `Aluno.java`  
+- `SistemaProfessor.java`
+- `run.bat`
 
-Frequência de 0% a 100% por aluno
+###▶️ Executar
+- `Execute o arquivo run.bat com duplo clique.`
 
-Alunos com frequência abaixo de 75% precisam de atenção especial
+---
 
-Sistema opera em memória durante a execução
+###📌 Premissas Assumidas
 
-Interface via terminal/texto sem interface gráfica
+- Cinco disciplinas fixas
 
-Cálculo de média usando média aritmética simples
+- Notas entre 0 e 10
 
-Validação de entrada em tempo real
+- Frequência entre 0% e 100%
 
-Um professor gerencia uma única turma
+- Alunos abaixo de 75% precisam de atenção
 
-Dados não persistem entre execuções (reset ao fechar)
+- Sistema funciona apenas em memória
 
-Decisões de Projeto
-Arquitetura Simplificada:
-2 arquivos Java: Um para dados (Aluno.java), outro para lógica (SistemaProfessor.java)
+- Interface textual (sem GUI)
 
-Sem frameworks externos: Java puro para máxima compatibilidade
+- Média aritmética simples
 
-Menu interativo no terminal: Fácil de usar e testar
+- Validação de dados em tempo real
 
-Principais Decisões Técnicas:
-Java puro sem dependências: Facilita execução em qualquer ambiente
+- Um professor por turma
 
-List em memória em vez de banco de dados: Para simplificação
+- Dados não persistem após encerrar
 
-Validação rigorosa: Impede entrada de dados inválidos
+---
 
-Cálculos em tempo real: Sem caching para garantir precisão
+##🧱 Arquitetura
+Aluno.java             -> Dados + cálculos  
+SistemaProfessor.java  -> Lógica + interface  
 
-Interface textual com formatação: Melhor legibilidade no terminal
+- Java puro (sem frameworks)
+ 
+- Menu interativo no terminal
 
-Design de Código:
-Classe Aluno contém dados e métodos de cálculo
+- Estrutura simples e direta
 
-Classe principal gerencia fluxo e interface
+---
 
-Separação de responsabilidades: Cálculos vs. Interface vs. Dados
+##⚙️ Decisões Técnicas
 
-Métodos auxiliares para validação e entrada de dados
+- Sem banco de dados (lista em memória)
 
-O que Mais é Importante Compartilhar
-Pontos Fortes do Sistema:
-Completamente funcional: Atende todos os requisitos especificados
+- Validação rigorosa de entradas
 
-Fácil de executar: Basta Java instalado
+- Cálculos em tempo real
 
-Código limpo e legível: Fácil de entender e modificar
+- Interface formatada para leitura
 
-Robusto: Validação completa contra erros de entrada
+- Separação de responsabilidades
 
-Rápido: Processamento instantâneo mesmo com muitos alunos
+---
 
-Recursos Implementados:
-✅ Cadastro completo com 5 notas e frequência
-✅ Cálculo automático de médias individuais e da turma
-✅ Identificação automática de alunos com problemas
-✅ Estatísticas detalhadas por disciplina
-✅ Relatório completo formatado para leitura
-✅ Busca de alunos por nome
-✅ Remoção segura de alunos cadastrados
+##🧠 Design de Código
 
-Potenciais Melhorias (para versões futuras):
-Salvar dados em arquivo para persistência
+- Classe Aluno: dados + médias
 
-Interface gráfica (Swing/JavaFX)
+- Classe principal: fluxo do sistema
 
-Exportação para Excel/PDF
+- Métodos auxiliares para:
 
-Suporte a múltiplas turmas
+- Entrada de dados
 
-Histórico de notas por bimestre
+- Validação
 
-Diferenciais:
-Zero configuração: Roda imediatamente após compilar
+- Cálculos
 
-Feedback claro: Mensagens informativas em português
+---
 
-Interface intuitiva: Menu numérico fácil de navegar
+##⭐ Pontos Fortes
 
-Cálculos precisos: Sem erros de arredondamento significativos
+✔ Funcional
 
-Observações Importantes:
-O sistema inclui 3 alunos de exemplo para demonstração imediata
+✔ Fácil de executar
 
-Relatório completo pode ser visualizado na opção 6 do menu
+✔ Código limpo
 
-Todos os cálculos são realizados em tempo real
+✔ Robusto contra erro humano
 
-Dados de teste são perdidos ao fechar o programa
+✔ Processamento rápido
 
-Status: ✅ Sistema completamente funcional e pronto para uso
-Complexidade: ⭐⭐☆☆☆ (Baixa - fácil de entender e modificar)
-Portabilidade: ⭐⭐⭐⭐⭐ (Roda em qualquer sistema com Java)
+---
 
-Desenvolvido para o processo seletivo da dti digital
+##🚀 Funcionalidades
+
+✅ Cadastro com 5 notas e frequência
+
+✅ Média individual e da turma
+
+✅ Identificação de alunos em risco
+
+✅ Estatísticas por disciplina
+
+✅ Relatório formatado
+
+✅ Busca por nome
+
+✅ Remoção segura
+
+---
+
+##🧪 Dados de Demonstração
+
+- Sistema inicia com 3 alunos de exemplo
+
+- Relatório completo disponível na opção 6 do menu
+
+---
+
+##🔮 Melhorias Futuras
+
+- Persistência em arquivo
+
+- Interface gráfica (Swing/JavaFX)
+
+- Exportação para Excel/PDF
+
+- Múltiplas turmas
+
+- Histórico por bimestre
+
+---
+
+##🏆 Diferenciais
+
+- Zero configuração
+
+- Mensagens em português
+
+- Menu intuitivo
+
+- Cálculos precisos
+
+---
+
+##⚠️ Observações
+
+- Todos os cálculos são feitos em tempo real
+
+- Dados são perdidos ao fechar o programa
+
 
