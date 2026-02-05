@@ -26,12 +26,12 @@ Projeto criado para o **processo seletivo da dti digital**.
 - `SistemaProfessor.java`
 - `run.bat`
 
-###▶️ Executar
+### ▶️ Executar
 - `Execute o arquivo run.bat com duplo clique.`
 
 ---
 
-###📌 Premissas Assumidas
+### 📌 Premissas Assumidas
 
 - Cinco disciplinas fixas
 
@@ -55,7 +55,7 @@ Projeto criado para o **processo seletivo da dti digital**.
 
 ---
 
-##🧱 Arquitetura
+## 🧱 Arquitetura
 Aluno.java             -> Dados + cálculos  
 SistemaProfessor.java  -> Lógica + interface  
 
@@ -67,7 +67,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##⚙️ Decisões Técnicas
+## ⚙️ Decisões Técnicas
 
 - Sem banco de dados (lista em memória)
 
@@ -81,7 +81,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##🧠 Design de Código
+## 🧠 Design de Código
 
 - Classe Aluno: dados + médias
 
@@ -97,7 +97,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##⭐ Pontos Fortes
+## ⭐ Pontos Fortes
 
 ✔ Funcional
 
@@ -111,7 +111,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##🚀 Funcionalidades
+## 🚀 Funcionalidades
 
 ✅ Cadastro com 5 notas e frequência
 
@@ -129,7 +129,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##🧪 Dados de Demonstração
+## 🧪 Dados de Demonstração
 
 - Sistema inicia com 3 alunos de exemplo
 
@@ -137,7 +137,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##🔮 Melhorias Futuras
+## 🔮 Melhorias Futuras
 
 - Persistência em arquivo
 
@@ -151,7 +151,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##🏆 Diferenciais
+## 🏆 Diferenciais
 
 - Zero configuração
 
@@ -163,7 +163,7 @@ SistemaProfessor.java  -> Lógica + interface
 
 ---
 
-##⚠️ Observações
+## ⚠️ Observações
 
 - Todos os cálculos são feitos em tempo real
 
