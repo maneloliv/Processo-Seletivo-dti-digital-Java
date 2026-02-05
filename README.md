@@ -27,6 +27,7 @@ Projeto criado para o **processo seletivo da dti digital**.
 - `run.bat`
 
 # ▶️ Executar
+
 - `Entre na pasta "sitema-professor"`
 - `Execute o arquivo run.bat com duplo clique.`
 
