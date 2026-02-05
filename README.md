@@ -26,12 +26,12 @@ Projeto criado para o **processo seletivo da dti digital**.
 - `SistemaProfessor.java`
 - `run.bat`
 
-### ▶️ Executar
+# ▶️ Executar
 - `Execute o arquivo run.bat com duplo clique.`
 
 ---
 
-### 📌 Premissas Assumidas
+## 📌 Premissas Assumidas
 
 - Cinco disciplinas fixas
 
