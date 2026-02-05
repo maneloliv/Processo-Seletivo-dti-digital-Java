@@ -1,299 +1,131 @@
 # Processo-Seletivo-dti-digital-Java
-📚 Sistema do Professor Carlos
-Sistema de gestão de notas e frequência desenvolvido em Java puro para o processo seletivo da dti digital. O sistema permite ao professor Carlos organizar as notas e frequência de seus alunos, com cálculos automáticos e relatórios.
-
-🚀 Funcionalidades
-✅ Requisitos Implementados
-Cadastro de alunos com 5 notas (0-10) por disciplina
-
-Registro de frequência (0-100%) por aluno
-
-Cálculos automáticos:
-
-Média individual de cada aluno
-
-Média da turma por disciplina (5 disciplinas)
-
-Média geral da turma
-
-Identificação automática:
-
-Alunos com média acima da média da turma
-
-Alunos com frequência abaixo de 75% (precisam de atenção especial)
-
-Relatórios completos com estatísticas detalhadas
-
-🎯 Funcionalidades Extras
-Busca de alunos por nome
-
-Remoção de alunos
-
-Exportação de relatório completo
-
-Validação robusta de entrada de dados
-
-Interface de terminal intuitiva
-
-Dados em memória durante a execução
-
-📁 Estrutura do Projeto
-text
-sistema-professor/
-├── Aluno.java                # Classe que representa um aluno
-├── SistemaProfessor.java     # Programa principal com menu interativo
-├── run.bat                   # Script de execução para Windows
-└── README.md                 # Este arquivo
-🔧 Tecnologias Utilizadas
-Java 8+ (JDK)
-
-Apenas bibliotecas padrão do Java
-
-Sem frameworks ou dependências externas
-
-📋 Instruções para Executar
+Sistema de Gestão Escolar - Professor Carlos
+Instruções para Executar o Sistema
 Pré-requisitos
-Java Development Kit (JDK) 8 ou superior instalado
+Java JDK 8 ou superior instalado
 
 Terminal/Command Prompt
 
-Passo a Passo
-Windows:
-Método 1 (Recomendado):
+Passos para Executar:
+Baixe os arquivos:
 
-Clique duas vezes no arquivo run.bat
+Aluno.java
 
-O script compilará e executará automaticamente
+SistemaProfessor.java
 
-Método 2 (Manual):
+Compile o sistema:
 
-cmd
-# Navegue até a pasta do projeto
-cd C:\caminho\para\sistema-professor
-
-# Compile os arquivos Java
-javac SistemaProfessor.java Aluno.java
-
-# Execute o sistema
-java SistemaProfessor
-Linux/Mac:
 bash
-# Navegue até a pasta do projeto
-cd /caminho/para/sistema-professor
-
-# Compile os arquivos Java
 javac SistemaProfessor.java Aluno.java
+Execute o programa:
 
-# Execute o sistema
-java SistemaProfessor
-Verificação da Instalação do Java
 bash
-# Verifique se o Java está instalado
-java -version
-javac -version
-Se não estiver instalado, baixe em: Oracle JDK ou Adoptium
+java SistemaProfessor
+Alternativa para Windows:
+Execute o arquivo run.bat (se disponível) clicando duas vezes nele.
 
-🖥️ Como Usar o Sistema
-Menu Principal
-text
-============ MENU PRINCIPAL ============
-1. Cadastrar novo aluno
-2. Listar todos os alunos
-3. Ver estatísticas da turma
-4. Buscar aluno por nome
-5. Remover aluno
-6. Exportar relatório completo
-0. Sair
-=========================================
-Fluxo de Uso
-Cadastrar aluno: Insira nome, 5 notas (D1 a D5) e frequência
+Lista de Premissas Assumidas
+Cinco disciplinas fixas para todos os alunos
 
-Ver estatísticas: Visualize médias, alunos acima da média e com frequência baixa
+Notas de 0 a 10 para cada disciplina
 
-Exportar relatório: Gere um relatório completo formatado
+Frequência de 0% a 100% por aluno
 
-Exemplo de Cadastro
-text
-Nome do aluno: João da Silva
+Alunos com frequência abaixo de 75% precisam de atenção especial
 
-Digite as 5 notas (0 a 10):
-Nota da disciplina 1: 8.5
-Nota da disciplina 2: 7.0
-Nota da disciplina 3: 9.0
-Nota da disciplina 4: 8.0
-Nota da disciplina 5: 7.5
+Sistema opera em memória durante a execução
 
-Frequência (0-100%): 80.0
-📊 Premissas Assumidas
-Dados e Validações:
-Notas: Cada aluno tem exatamente 5 notas (uma por disciplina)
+Interface via terminal/texto sem interface gráfica
 
-Intervalos:
+Cálculo de média usando média aritmética simples
 
-Notas: 0 a 10 (inclusive)
+Validação de entrada em tempo real
 
-Frequência: 0% a 100% (inclusive)
+Um professor gerencia uma única turma
 
-Limite de atenção: Frequência abaixo de 75% requer atenção especial
+Dados não persistem entre execuções (reset ao fechar)
 
-Cálculos:
+Decisões de Projeto
+Arquitetura Simplificada:
+2 arquivos Java: Um para dados (Aluno.java), outro para lógica (SistemaProfessor.java)
 
-Média aritmética simples para todas as disciplinas
+Sem frameworks externos: Java puro para máxima compatibilidade
 
-Média da turma calculada sobre todas as notas de todos os alunos
+Menu interativo no terminal: Fácil de usar e testar
 
-Comportamento do Sistema:
-Persistência: Dados ficam em memória durante a execução (reinicia ao fechar)
+Principais Decisões Técnicas:
+Java puro sem dependências: Facilita execução em qualquer ambiente
 
-Interface: Apenas terminal/texto, sem interface gráfica
+List em memória em vez de banco de dados: Para simplificação
 
-Execução: Sistema single-user, não concorrente
+Validação rigorosa: Impede entrada de dados inválidos
 
-Dados de exemplo: Sistema inicia com 3 alunos previamente cadastrados
+Cálculos em tempo real: Sem caching para garantir precisão
 
-Técnicas:
-Tratamento de erros: Validação em tempo real de entrada do usuário
-
-Arredondamento: Duas casas decimais para médias
-
-Busca: Case-insensitive para nomes
-
-🎯 Decisões de Projeto
-Arquitetura:
-Aplicação monolítica: Todo o código em dois arquivos Java
-
-Separação de responsabilidades:
-
-Aluno.java: Modelo de dados e cálculos básicos
-
-SistemaProfessor.java: Lógica de negócio, interface e controle
-
-Programação procedural com orientação a objetos básica
+Interface textual com formatação: Melhor legibilidade no terminal
 
 Design de Código:
-Sem frameworks: Optou-se por Java puro para simplicidade e portabilidade
+Classe Aluno contém dados e métodos de cálculo
 
-Interface textual: Console/terminal para fácil execução em qualquer ambiente
+Classe principal gerencia fluxo e interface
 
-Validação proativa: Previne entrada de dados inválidos
+Separação de responsabilidades: Cálculos vs. Interface vs. Dados
 
-Feedback imediato: Mensagens claras para o usuário
+Métodos auxiliares para validação e entrada de dados
 
-Escolhas Técnicas:
-Lista em memória (ArrayList) em vez de banco de dados
+O que Mais é Importante Compartilhar
+Pontos Fortes do Sistema:
+Completamente funcional: Atende todos os requisitos especificados
 
-Prós: Simplicidade, zero configuração
+Fácil de executar: Basta Java instalado
 
-Contras: Dados perdidos ao encerrar
+Código limpo e legível: Fácil de entender e modificar
 
-Entrada via Scanner em vez de interface gráfica
+Robusto: Validação completa contra erros de entrada
 
-Prós: Funciona em qualquer terminal, leve
+Rápido: Processamento instantâneo mesmo com muitos alunos
 
-Contras: Menos amigável que GUI
+Recursos Implementados:
+✅ Cadastro completo com 5 notas e frequência
+✅ Cálculo automático de médias individuais e da turma
+✅ Identificação automática de alunos com problemas
+✅ Estatísticas detalhadas por disciplina
+✅ Relatório completo formatado para leitura
+✅ Busca de alunos por nome
+✅ Remoção segura de alunos cadastrados
 
-Cálculos em tempo real em vez de caching
+Potenciais Melhorias (para versões futuras):
+Salvar dados em arquivo para persistência
 
-Prós: Sempre dados atualizados
+Interface gráfica (Swing/JavaFX)
 
-Contras: Recálculo a cada operação
+Exportação para Excel/PDF
 
-Decisões de Usabilidade:
-Menu numérico: Facilita navegação rápida
+Suporte a múltiplas turmas
 
-Dados de exemplo: Demonstra funcionalidades imediatamente
+Histórico de notas por bimestre
 
-Formatação consistente: Tabelas alinhadas, casas decimais padronizadas
+Diferenciais:
+Zero configuração: Roda imediatamente após compilar
 
-Cores/ícones textuais: Usa emojis e símbolos para melhor visualização
+Feedback claro: Mensagens informativas em português
 
-📈 O que Mais é Importante Compartilhar
-Pontos Fortes do Projeto:
-Simplicidade e Elegância
+Interface intuitiva: Menu numérico fácil de navegar
 
-Código limpo e bem documentado
+Cálculos precisos: Sem erros de arredondamento significativos
 
-Sem complexidades desnecessárias
+Observações Importantes:
+O sistema inclui 3 alunos de exemplo para demonstração imediata
 
-Fácil de entender e modificar
+Relatório completo pode ser visualizado na opção 6 do menu
 
-Robustez
+Todos os cálculos são realizados em tempo real
 
-Validação completa de todas as entradas
+Dados de teste são perdidos ao fechar o programa
 
-Tratamento de exceções adequado
+Status: ✅ Sistema completamente funcional e pronto para uso
+Complexidade: ⭐⭐☆☆☆ (Baixa - fácil de entender e modificar)
+Portabilidade: ⭐⭐⭐⭐⭐ (Roda em qualquer sistema com Java)
 
-Mensagens de erro claras e informativas
+Desenvolvido para o processo seletivo da dti digital
 
-Portabilidade
-
-Roda em qualquer sistema com Java
-
-Sem dependências externas
-
-Tamanho mínimo do projeto
-
-Documentação Completa
-
-Comentários no código
-
-README detalhado
-
-Instruções passo a passo
-
-Decisões Críticas:
-Optou-se por não usar banco de dados
-
-Justificativa: O foco era demonstrar lógica de negócio, não persistência
-
-Alternativa: Facilmente extendível para usar arquivos ou banco
-
-Interface apenas terminal
-
-Justificativa: Atender o requisito mínimo com máxima portabilidade
-
-Alternativa: Pode ser transformado em API REST ou GUI facilmente
-
-Sem testes unitários formais
-
-Justificativa: O teste especificou que eram opcionais
-
-Alternativa: Código estruturado para fácil adição de testes
-
-Extensibilidade:
-O sistema foi projetado para ser facilmente extendido:
-
-java
-// Possíveis melhorias:
-// 1. Persistência em arquivo
-// 2. Interface web com Spring Boot
-// 3. Exportação para Excel/PDF
-// 4. Múltiplas turmas
-// 5. Histórico de notas
-Desafios Enfrentados:
-Validação de entrada: Garantir que o usuário só insira dados válidos
-
-Formatação de saída: Alinhar tabelas no terminal
-
-Cálculos precisos: Evitar erros de arredondamento
-
-Experiência do usuário: Menu intuitivo mesmo em terminal
-
-Conclusão:
-Este projeto demonstra:
-
-Domínio de Java puro
-
-Capacidade de resolver problemas reais
-
-Boa organização de código
-
-Foco em requisitos do usuário
-
-Balanceamento entre simplicidade e funcionalidade
-
-👨‍💻 Autor
-Desenvolvido para o processo seletivo da dti digital.
-
-📄 Licença
-Este projeto é para fins de avaliação técnica.
